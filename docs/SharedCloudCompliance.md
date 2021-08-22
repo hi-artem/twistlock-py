@@ -1,0 +1,48 @@
+# SharedCloudCompliance
+
+CloudCompliance holds the cloud compliance scan data
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**account_id** | **str** | AccountID is the cloud account ID.  | [optional] 
+**applicable_rules** | **list[str]** | Rules applied on the package.  | [optional] 
+**binary_pkgs** | **list[str]** | Names of the distro binary package names (packages which are built from the source of the package).  | [optional] 
+**block** | **bool** | Indicates if the vulnerability has a block effect (true) or not (false).  | [optional] 
+**cause** | **str** | Additional information regarding the root cause for the vulnerability.  | [optional] 
+**collections** | **list[str]** | Collections are collections to which this compliance applies.  | [optional] 
+**credential_id** | **str** | CredentialID is the id of the used credential.  | [optional] 
+**cri** | **bool** | Indicates if this is a CRI-specific vulnerability (true) or not (false).  | [optional] 
+**custom** | **bool** | Indicates if the vulnerability is a custom vulnerability (e.g., openscap, sandbox) (true) or not (false).  | [optional] 
+**cve** | **str** | CVE ID of the vulnerability (if applied).  | [optional] 
+**cvss** | **float** | CVSS score of the vulnerability.  | [optional] 
+**description** | **str** | Description of the vulnerability.  | [optional] 
+**discovered** | **datetime** | Date/time when the vulnerability was discovered.  | [optional] 
+**err** | **str** | Err holds any error found during a scan.  | [optional] 
+**exploit** | [**VulnExploitType**](VulnExploitType.md) |  | [optional] 
+**fix_date** | **int** | Date/time when the vulnerability was fixed (in Unix time).  | [optional] 
+**fix_link** | **str** | Link to the vendor&#39;s fixed-version information.  | [optional] 
+**function_layer** | **str** | Specifies the serverless layer ID in which the vulnerability was discovered.  | [optional] 
+**grace_period_days** | **int** | Number of grace days left for a vulnerability, based on the configured grace period. Nil if no block vulnerability rule applies.  | [optional] 
+**id** | **int** | ID of the violation.  | [optional] 
+**layer_time** | **int** | Date/time of the image layer to which the CVE belongs.  | [optional] 
+**link** | **str** | Vendor link to the CVE.  | [optional] 
+**package_name** | **str** | Name of the package that caused the vulnerability.  | [optional] 
+**package_version** | **str** | Version of the package that caused the vulnerability (or null).  | [optional] 
+**passed** | **bool** | Passed indicates if the compliance check pass.  | [optional] 
+**products** | [**SharedInstalledProducts**](SharedInstalledProducts.md) |  | [optional] 
+**published** | **int** | Date/time when the vulnerability was published (in Unix time).  | [optional] 
+**risk_factors** | **dict(str, str)** | RiskFactors maps the existence of vulnerability risk factors | [optional] 
+**severity** | **str** | Textual representation of the vulnerability&#39;s severity.  | [optional] 
+**status** | **str** | Vendor status for the vulnerability.  | [optional] 
+**templates** | [**list[VulnComplianceTemplate]**](VulnComplianceTemplate.md) | List of templates with which the vulnerability is associated.  | [optional] 
+**text** | **str** | Description of the violation.  | [optional] 
+**title** | **str** | Compliance title.  | [optional] 
+**twistlock** | **bool** | Indicates if this is a Twistlock-specific vulnerability (true) or not (false).  | [optional] 
+**type** | [**VulnType**](VulnType.md) |  | [optional] 
+**vec_str** | **str** | Textual representation of the metric values used to score the vulnerability.  | [optional] 
+**vuln_tag_infos** | [**list[VulnTagInfo]**](VulnTagInfo.md) | Tag information for the vulnerability.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
